@@ -116,7 +116,7 @@
       </ul>
 
       <div class="warning-box">
-        <strong>⚠️ Permanent & Irreversible:</strong> Deletion is instantaneous and permanent. There is no soft-delete holding period, grace period, or delayed retention queue. Once your account is deleted, your handle and posts cannot be recovered.
+        <strong>⚠️ Permanent & Irreversible:</strong> Deletion is permanent in active databases, with no user grace period or soft-delete holding period. Once your account is deleted, your handle and posts cannot be recovered.
       </div>
 
       <h2>2. Method 1: Instant In-App Deletion (Recommended)</h2>
@@ -153,7 +153,7 @@
         <li><strong>Phone Verification:</strong> An authorized administrator will contact your registered phone number directly to verify that the deletion request was genuinely authorized by the phone number owner before any records are removed.</li>
         <li><strong>Manual Dashboard Deletion:</strong> Following successful verification, an authorized administrator manually deletes the account through the Supabase Dashboard. This immediately triggers the database cascade (<code>ON DELETE CASCADE</code>) that permanently removes your authentication record, profile, whispers, comments, likes, reports, and rate-limit counters.</li>
         <li><strong>Email Confirmation:</strong> The administrator will reply to your email once the manual database deletion has been completed.</li>
-        <li><strong>Active Operational Deletion:</strong> Once your account deletion is completed, your account credentials, profile, whispers, comments, likes, reports, and associated interaction records are deleted from our active operational databases. Copies that may exist in routine backups or system logs can remain for a limited period and are handled according to the applicable retention policies of those systems. Such backup copies expire as the relevant backups are rotated.</li>
+        <li><strong>Active Operational Deletion:</strong> Once account deletion is completed, personal data and associated interaction records are deleted from active operational databases. Copies that may exist in routine backups or system logs may remain for a limited period and are handled according to the applicable retention policies of those systems.</li>
       </ul>
 
       <h2>5. Questions & Support</h2>

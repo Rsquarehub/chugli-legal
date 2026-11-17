@@ -164,7 +164,7 @@
       <p>You have full ownership and control over your account and data:</p>
       <ul>
         <li><strong>Immediate Permanent Deletion:</strong> You can permanently delete your account at any time directly inside the App (Profile &rarr; Account Danger Zone &rarr; Permanently Delete Account).</li>
-        <li><strong>Cascade Wipe:</strong> When you delete your account, our database immediately executes an irreversible cascade deletion (<code>ON DELETE CASCADE</code>) that purges your phone number, authentication credentials, profile, all whispers, comments, likes, reports, blocks, and rate-limit counters. No lingering retention period applies.</li>
+        <li><strong>Cascade Wipe:</strong> When you delete your account, our database immediately executes an irreversible cascade deletion (<code>ON DELETE CASCADE</code>) that purges your phone number, authentication credentials, profile, all whispers, comments, likes, reports, blocks, and rate-limit counters from active operational databases. Copies that may exist in routine backups or system logs may remain for a limited period and are handled according to the applicable retention policies of those systems.</li>
         <li><strong>Deletion Without App:</strong> If you have uninstalled the App or cannot access your device, you can request manual deletion via our <a href="./delete-account.html">Public Account Deletion Page</a>.</li>
         <li><strong>Account Deactivation:</strong> As an alternative to deletion, you may deactivate your account, which temporarily hides your whispers and profile from the feed without deleting your history.</li>
       </ul>
