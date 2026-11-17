@@ -132,30 +132,32 @@
       </div>
       <p>Your account will be deleted on the server immediately, your session will be signed out, and you will be returned to the initial onboarding screen.</p>
 
-      <h2>3. Method 2: Web Deletion Request (Without App Installed)</h2>
-      <p>If you have uninstalled the Chugli app, lost access to your device, or are unable to delete your account in-app, you can submit a manual deletion request by contacting our compliance team:</p>
+      <h2>3. Method 2: Manual Deletion Request via Email (Without App Installed)</h2>
+      <p>If you have uninstalled the Chugli app, lost access to your device, or are unable to delete your account in-app, you can submit a manual deletion request to our administrative team.</p>
+      <p><em>Please note: Chugli accounts are registered and authenticated strictly via phone number, not email address. Because of this, an incoming email alone cannot prove ownership of an account.</em></p>
 
       <div class="step-box">
-        <p><strong>Step 1:</strong> Send an email to: <a href="mailto:support@chugli.app">support@chugli.app</a></p>
+        <p><strong>Step 1:</strong> Send an email to: <a href="mailto:rsquarehub2802@gmail.com">rsquarehub2802@gmail.com</a></p>
         <p><strong>Step 2:</strong> Use the subject line: <code>[Account Deletion Request] - Registered Phone Number</code></p>
         <p><strong>Step 3:</strong> In the body of your email, please provide:</p>
         <ul>
           <li>Your registered phone number with international country calling code (e.g. <code>+91 99999 00001</code>).</li>
-          <li>Your approximate registered anonymous handle (if remembered, e.g. <code>ShyTiger1234</code>).</li>
-          <li>Confirmation that you authorize the permanent deletion of your account and all associated whispers, comments, and data.</li>
+          <li>Your registered anonymous handle (optional, if remembered).</li>
+          <li>A clear statement confirming that you authorize the permanent deletion of your account and all associated data.</li>
         </ul>
       </div>
 
-      <h2>4. Verification & Processing Timeline</h2>
-      <p>To prevent fraudulent deletion of user accounts, our team will verify ownership by sending an SMS verification OTP or administrative confirmation code to your registered phone number. Once verified:</p>
+      <h2>4. Verification & Manual Processing</h2>
+      <p>To protect users against fraudulent or unauthorized account deletions, requests submitted via email undergo manual review:</p>
       <ul>
-        <li>Your account and all associated database records will be permanently deleted via the server deletion RPC within <strong>48 to 72 business hours</strong> of verification.</li>
-        <li>You will receive an email confirmation once the database hard-delete is completed.</li>
-        <li>No user personal data or content is retained following completion of the deletion process.</li>
+        <li><strong>Phone Verification:</strong> An authorized administrator will contact your registered phone number directly to verify that the deletion request was genuinely authorized by the phone number owner before any records are removed.</li>
+        <li><strong>Manual Dashboard Deletion:</strong> Following successful verification, an authorized administrator manually deletes the account through the Supabase Dashboard. This immediately triggers the database cascade (<code>ON DELETE CASCADE</code>) that permanently removes your authentication record, profile, whispers, comments, likes, reports, and rate-limit counters.</li>
+        <li><strong>Email Confirmation:</strong> The administrator will reply to your email once the manual database deletion has been completed.</li>
+        <li><strong>Active Operational Deletion:</strong> Once your account deletion is completed, your account credentials, profile, whispers, comments, likes, reports, and associated interaction records are deleted from our active operational databases. Copies that may exist in routine backups or system logs can remain for a limited period and are handled according to the applicable retention policies of those systems. Such backup copies expire as the relevant backups are rotated.</li>
       </ul>
 
       <h2>5. Questions & Support</h2>
-      <p>For any questions regarding your privacy, account status, or data deletion, please contact us at <a href="mailto:support@chugli.app">support@chugli.app</a>.</p>
+      <p>For any questions regarding your privacy, account status, or data deletion, please contact us at <a href="mailto:rsquarehub2802@gmail.com">rsquarehub2802@gmail.com</a>.</p>
     </div>
     <div class="footer">
       &copy; 2026 Chugli. All rights reserved. • <a href="./privacy.html">Privacy Policy</a> • <a href="./terms.html">Terms of Service</a>
