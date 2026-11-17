@@ -103,7 +103,7 @@
       <p>This page provides official instructions for users of <strong>Chugli</strong> to permanently delete their account and associated personal data, including options for users who have already uninstalled the application or cannot access their mobile device.</p>
 
       <h2>1. What Data Is Deleted Upon Account Deletion?</h2>
-      <p>When your account deletion is processed, our system executes an immediate, irreversible database hard-delete that cascades across all records. The following data is permanently wiped forever:</p>
+      <p>When an account deletion is completed—either immediately via the in-app self-service flow or following manual verification for email requests—our database executes an irreversible cascade deletion (<code>ON DELETE CASCADE</code>) across active operational databases. The following data is deleted from active operational databases (copies in routine system backups or logs expire according to applicable retention policies):</p>
       <ul>
         <li><strong>Authentication Credentials:</strong> Your phone number and authentication record in Supabase Auth (<code>auth.users</code>).</li>
         <li><strong>User Profile:</strong> Your anonymous username handle, phone reference, country calling code, language preference, and privacy settings.</li>
@@ -112,7 +112,7 @@
         <li><strong>Interactions:</strong> All likes you have placed on other whispers.</li>
         <li><strong>Safety Records:</strong> Your blocked accounts list, moderation reports submitted by you, and moderation reports targeting your posts.</li>
         <li><strong>Rate Limiting Counters:</strong> Any abuse-prevention bucket records associated with your account.</li>
-        <li><strong>Device Storage:</strong> All cached tokens, posts, and session keys are wiped from local device storage upon deletion.</li>
+        <li><strong>Device Storage:</strong> When deletion is performed in-app, local session tokens, user profile data, and cached whispers are cleared from the active device upon successful completion. External email deletion requests cannot remotely wipe local storage from inaccessible, offline, or uninstalled devices; uninstalling the app or clearing device app data removes any local files.</li>
       </ul>
 
       <div class="warning-box">
@@ -134,7 +134,7 @@
 
       <h2>3. Method 2: Manual Deletion Request via Email (Without App Installed)</h2>
       <p>If you have uninstalled the Chugli app, lost access to your device, or are unable to delete your account in-app, you can submit a manual deletion request to our administrative team.</p>
-      <p><em>Please note: Chugli accounts are registered and authenticated strictly via phone number, not email address. Because of this, an incoming email alone cannot prove ownership of an account.</em></p>
+      <p><em>Please note: Chugli accounts are registered and authenticated strictly via phone number, not email address. Because of this, an incoming email alone cannot prove ownership of an account. Unlike instant in-app deletion, email requests cannot be processed immediately; they require manual phone verification and administrative action before deletion can occur.</em></p>
 
       <div class="step-box">
         <p><strong>Step 1:</strong> Send an email to: <a href="mailto:rsquarehub2802@gmail.com">rsquarehub2802@gmail.com</a></p>
@@ -148,10 +148,10 @@
       </div>
 
       <h2>4. Verification & Manual Processing</h2>
-      <p>To protect users against fraudulent or unauthorized account deletions, requests submitted via email undergo manual review:</p>
+      <p>To protect users against fraudulent or unauthorized account deletions, requests submitted via email undergo manual review and are not processed immediately:</p>
       <ul>
         <li><strong>Phone Verification:</strong> An authorized administrator will contact your registered phone number directly to verify that the deletion request was genuinely authorized by the phone number owner before any records are removed.</li>
-        <li><strong>Manual Dashboard Deletion:</strong> Following successful verification, an authorized administrator manually deletes the account through the Supabase Dashboard. This immediately triggers the database cascade (<code>ON DELETE CASCADE</code>) that permanently removes your authentication record, profile, whispers, comments, likes, reports, and rate-limit counters.</li>
+        <li><strong>Manual Dashboard Deletion:</strong> Following successful verification, an authorized administrator manually deletes the account through the Supabase Dashboard. This triggers the database cascade (<code>ON DELETE CASCADE</code>) that permanently removes your authentication record, profile, whispers, comments, likes, reports, and rate-limit counters from active operational databases.</li>
         <li><strong>Email Confirmation:</strong> The administrator will reply to your email once the manual database deletion has been completed.</li>
         <li><strong>Active Operational Deletion:</strong> Once account deletion is completed, personal data and associated interaction records are deleted from active operational databases. Copies that may exist in routine backups or system logs may remain for a limited period and are handled according to the applicable retention policies of those systems.</li>
       </ul>
