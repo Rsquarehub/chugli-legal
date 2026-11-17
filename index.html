@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal & Compliance Portal - Chugli</title>
+  <style>
+    :root {
+      --primary: #4F46E5;
+      --text: #1F2937;
+      --text-muted: #4B5563;
+      --bg: #F9FAFB;
+      --card-bg: #FFFFFF;
+      --border: #E5E7EB;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 20px 64px 20px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    h1 {
+      font-size: 30px;
+      color: #111827;
+      margin: 12px 0 6px 0;
+    }
+    .subhead {
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+    .badge {
+      display: inline-block;
+      background: #EEF2FF;
+      color: var(--primary);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .doc-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .doc-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-color: #CBD5E1;
+    }
+    .doc-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0 0 6px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .doc-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+    .arrow {
+      font-size: 18px;
+      color: var(--primary);
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+      color: #9CA3AF;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="badge">Official Compliance Portal</span>
+      <h1>Chugli Legal Documents</h1>
+      <p class="subhead">Public regulatory, privacy, and compliance documentation for the Chugli Android application.</p>
+    </div>
+
+    <div class="card-list">
+      <a class="doc-card" href="./privacy.html">
+        <div class="doc-title">
+          <span>Privacy Policy</span>
+          <span class="arrow">&rarr;</span>
+        </div>
+        <p class="doc-desc">Details how user data, phone verification, microphone permissions, anonymous handles, and zero-ad policies are managed.</p>
+      </a>
+
+      <a class="doc-card" href="./terms.html">
+        <div class="doc-title">
+          <span>Terms of Service</span>
+          <span class="arrow">&rarr;</span>
+        </div>
+        <p class="doc-desc">Outlines acceptable use, prohibited conduct, content boundaries, moderation systems, and account guidelines.</p>
+      </a>
+
+      <a class="doc-card" href="./delete-account.html">
+        <div class="doc-title">
+          <span>Request Account & Data Deletion</span>
+          <span class="arrow">&rarr;</span>
+        </div>
+        <p class="doc-desc">Instructions for instant in-app account deletion and web deletion requests for users who have uninstalled the app.</p>
+      </a>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 Chugli. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>

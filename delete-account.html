@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Deletion - Chugli</title>
+  <style>
+    :root {
+      --primary: #4F46E5;
+      --danger: #DC2626;
+      --text: #1F2937;
+      --text-muted: #4B5563;
+      --bg: #F9FAFB;
+      --card-bg: #FFFFFF;
+      --border: #E5E7EB;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 32px 20px 64px 20px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px 32px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    h1 {
+      font-size: 28px;
+      color: #111827;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    .badge {
+      display: inline-block;
+      background: #FEE2E2;
+      color: var(--danger);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-size: 20px;
+      color: #111827;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+    p, li {
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .step-box {
+      background: #F3F4F6;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      border-left: 4px solid var(--primary);
+    }
+    .warning-box {
+      background: #FFF5F5;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      border-left: 4px solid var(--danger);
+    }
+    .footer {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 13px;
+      color: #9CA3AF;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <span class="badge">Google Play Data Safety Compliance</span>
+      <h1>Request Account & Data Deletion</h1>
+      <p>This page provides official instructions for users of <strong>Chugli</strong> to permanently delete their account and associated personal data, including options for users who have already uninstalled the application or cannot access their mobile device.</p>
+
+      <h2>1. What Data Is Deleted Upon Account Deletion?</h2>
+      <p>When your account deletion is processed, our system executes an immediate, irreversible database hard-delete that cascades across all records. The following data is permanently wiped forever:</p>
+      <ul>
+        <li><strong>Authentication Credentials:</strong> Your phone number and authentication record in Supabase Auth (<code>auth.users</code>).</li>
+        <li><strong>User Profile:</strong> Your anonymous username handle, phone reference, country calling code, language preference, and privacy settings.</li>
+        <li><strong>User Content:</strong> All whispers (posts) authored by you.</li>
+        <li><strong>Comments:</strong> All replies and comments posted by your account.</li>
+        <li><strong>Interactions:</strong> All likes you have placed on other whispers.</li>
+        <li><strong>Safety Records:</strong> Your blocked accounts list, moderation reports submitted by you, and moderation reports targeting your posts.</li>
+        <li><strong>Rate Limiting Counters:</strong> Any abuse-prevention bucket records associated with your account.</li>
+        <li><strong>Device Storage:</strong> All cached tokens, posts, and session keys are wiped from local device storage upon deletion.</li>
+      </ul>
+
+      <div class="warning-box">
+        <strong>⚠️ Permanent & Irreversible:</strong> Deletion is instantaneous and permanent. There is no soft-delete holding period, grace period, or delayed retention queue. Once your account is deleted, your handle and posts cannot be recovered.
+      </div>
+
+      <h2>2. Method 1: Instant In-App Deletion (Recommended)</h2>
+      <p>If you have the Chugli application installed on your Android device:</p>
+      <div class="step-box">
+        <ol>
+          <li>Open the <strong>Chugli</strong> app on your Android device.</li>
+          <li>Tap the <strong>Profile</strong> tab in the bottom navigation bar (or your user badge in the top header).</li>
+          <li>Scroll down to the <strong>Account Danger Zone</strong> card.</li>
+          <li>Tap <strong>Permanently Delete Account</strong>.</li>
+          <li>Review the confirmation dialog and tap <strong>Delete Forever</strong>.</li>
+        </ol>
+      </div>
+      <p>Your account will be deleted on the server immediately, your session will be signed out, and you will be returned to the initial onboarding screen.</p>
+
+      <h2>3. Method 2: Web Deletion Request (Without App Installed)</h2>
+      <p>If you have uninstalled the Chugli app, lost access to your device, or are unable to delete your account in-app, you can submit a manual deletion request by contacting our compliance team:</p>
+
+      <div class="step-box">
+        <p><strong>Step 1:</strong> Send an email to: <a href="mailto:support@chugli.app">support@chugli.app</a></p>
+        <p><strong>Step 2:</strong> Use the subject line: <code>[Account Deletion Request] - Registered Phone Number</code></p>
+        <p><strong>Step 3:</strong> In the body of your email, please provide:</p>
+        <ul>
+          <li>Your registered phone number with international country calling code (e.g. <code>+91 99999 00001</code>).</li>
+          <li>Your approximate registered anonymous handle (if remembered, e.g. <code>ShyTiger1234</code>).</li>
+          <li>Confirmation that you authorize the permanent deletion of your account and all associated whispers, comments, and data.</li>
+        </ul>
+      </div>
+
+      <h2>4. Verification & Processing Timeline</h2>
+      <p>To prevent fraudulent deletion of user accounts, our team will verify ownership by sending an SMS verification OTP or administrative confirmation code to your registered phone number. Once verified:</p>
+      <ul>
+        <li>Your account and all associated database records will be permanently deleted via the server deletion RPC within <strong>48 to 72 business hours</strong> of verification.</li>
+        <li>You will receive an email confirmation once the database hard-delete is completed.</li>
+        <li>No user personal data or content is retained following completion of the deletion process.</li>
+      </ul>
+
+      <h2>5. Questions & Support</h2>
+      <p>For any questions regarding your privacy, account status, or data deletion, please contact us at <a href="mailto:support@chugli.app">support@chugli.app</a>.</p>
+    </div>
+    <div class="footer">
+      &copy; 2026 Chugli. All rights reserved. • <a href="./privacy.html">Privacy Policy</a> • <a href="./terms.html">Terms of Service</a>
+    </div>
+  </div>
+</body>
+</html>

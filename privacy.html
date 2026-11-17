@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Chugli</title>
+  <style>
+    :root {
+      --primary: #4F46E5;
+      --text: #1F2937;
+      --text-muted: #4B5563;
+      --bg: #F9FAFB;
+      --card-bg: #FFFFFF;
+      --border: #E5E7EB;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 32px 20px 64px 20px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px 32px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    h1 {
+      font-size: 28px;
+      color: #111827;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    .date {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 20px;
+      color: #111827;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+    h3 {
+      font-size: 16px;
+      color: #1F2937;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+    p, li {
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .badge {
+      display: inline-block;
+      background: #EEF2FF;
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+    .highlight-box {
+      background-color: #F3F4F6;
+      border-left: 4px solid var(--primary);
+      padding: 14px 18px;
+      margin: 18px 0;
+      border-radius: 4px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 13px;
+      color: #9CA3AF;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <span class="badge">Official Compliance Document</span>
+      <h1>Privacy Policy for Chugli</h1>
+      <div class="date">Effective Date: November 17, 2026</div>
+
+      <p>This Privacy Policy describes how <strong>Chugli</strong> ("we", "our", or "the App") collects, uses, stores, and protects your information when you access or use the Chugli mobile application.</p>
+
+      <h2>1. Anonymous-First Architecture</h2>
+      <p>Chugli is designed from the ground up as an anonymous community and campus whisper feed. Our core privacy commitment is that <strong>your real identity and phone number are never made public to other users</strong>. All public posts ("whispers"), comments, and interactions occur under a randomly generated pseudonymous handle (such as <em>ShyTiger1234</em>).</p>
+
+      <h2>2. Information We Collect</h2>
+
+      <h3>A. Information You Provide to Us</h3>
+      <ul>
+        <li><strong>Phone Number & Country Code:</strong> Collected strictly for authentication and security verification via one-time password (SMS OTP). Your phone number is stored in an isolated, secure database table protected by PostgreSQL Row Level Security (RLS). Other users can never view or search for your phone number. On your own device, your phone number is masked.</li>
+        <li><strong>User-Generated Content:</strong> The text of whispers (posts, up to 500 characters) and comments (up to 250 characters) that you publish, along with timestamps and language tags.</li>
+        <li><strong>Interactions:</strong> Post likes, user reports (reason for report and target post), and accounts you choose to block.</li>
+        <li><strong>Language & App Preferences:</strong> Your selected interface language and UI theme mode (light/dark/system).</li>
+      </ul>
+
+      <h3>B. Permissions & On-Device Processing</h3>
+      <ul>
+        <li><strong>Microphone Permission (<code>android.permission.RECORD_AUDIO</code>):</strong> Requested optionally when using the voice transcription feature. The audio stream is transcribed locally in real-time using on-device speech recognition. <strong>We do not record, store, or transmit your voice or audio recordings to any server.</strong></li>
+        <li><strong>Text Transliteration:</strong> When using the phonetic transliteration feature (e.g. typing Hinglish to produce Hindi script), text fragments may be sent to Google Input Tools API for script conversion, or converted via local offline dictionaries. No phone numbers or user identifiers are attached to transliteration requests.</li>
+      </ul>
+
+      <h3>C. Data Stored Locally on Your Device</h3>
+      <p>For offline viewing performance and session preservation, the App stores the following data locally using your device's private storage (AsyncStorage):</p>
+      <ul>
+        <li>Active authentication session tokens.</li>
+        <li>Locally cached recent whispers (up to 50 posts) to allow offline feed browsing.</li>
+        <li>Your anonymous profile metadata and preferences.</li>
+        <li>Your local list of blocked account IDs and reported post IDs.</li>
+      </ul>
+
+      <h2>3. How We Use Your Information</h2>
+      <p>We use the collected information solely to:</p>
+      <ul>
+        <li>Authenticate your account via SMS OTP and prevent unauthorized access.</li>
+        <li>Publish and display whispers and replies under your anonymous handle.</li>
+        <li>Enforce community guidelines, rate limiting, anti-spam protections, and content moderation.</li>
+        <li>Respect user block lists (preventing interactions between blocked accounts).</li>
+        <li>Comply with applicable legal obligations and store policies.</li>
+      </ul>
+
+      <div class="highlight-box">
+        <strong>Zero Commercial Sale of Personal Data:</strong> We do not sell, rent, or trade your phone number, posts, or personal data to third parties, data brokers, or advertisers. We do not integrate third-party ad networks or behavioral tracking SDKs.
+      </div>
+
+      <h2>4. Third-Party Service Providers</h2>
+      <p>We share data only with infrastructure providers necessary to operate the application:</p>
+      <ul>
+        <li><strong>Supabase Inc.:</strong> Cloud database infrastructure, authentication management, and secure PostgreSQL hosting with Row Level Security.</li>
+        <li><strong>SMS Gateway Providers:</strong> Telecommunication partners configured via Supabase Auth to transmit SMS verification codes to your phone number.</li>
+        <li><strong>Google Input Tools:</strong> Used ephemerally for phonetic script transliteration queries.</li>
+      </ul>
+
+      <h2>5. Data Retention & Account Deletion</h2>
+      <p>You have full ownership and control over your account and data:</p>
+      <ul>
+        <li><strong>Immediate Permanent Deletion:</strong> You can permanently delete your account at any time directly inside the App (Profile &rarr; Account Danger Zone &rarr; Permanently Delete Account).</li>
+        <li><strong>Cascade Wipe:</strong> When you delete your account, our database immediately executes an irreversible cascade deletion (<code>ON DELETE CASCADE</code>) that purges your phone number, authentication credentials, profile, all whispers, comments, likes, reports, blocks, and rate-limit counters. No lingering retention period applies.</li>
+        <li><strong>Deletion Without App:</strong> If you have uninstalled the App or cannot access your device, you can request manual deletion via our <a href="./delete-account.html">Public Account Deletion Page</a>.</li>
+        <li><strong>Account Deactivation:</strong> As an alternative to deletion, you may deactivate your account, which temporarily hides your whispers and profile from the feed without deleting your history.</li>
+      </ul>
+
+      <h2>6. Security Measures</h2>
+      <p>We implement industry-standard security safeguards to protect your information, including encrypted HTTPS/TLS in transit, PostgreSQL Row Level Security (RLS) policies at the database layer, server-side transaction spin-locks for rate limiting, and input sanitization to prevent injection and spam abuse.</p>
+
+      <h2>7. Children's Privacy</h2>
+      <p>Chugli is not directed to individuals under the age of 13 (or under 18 where parental consent is required by local law). We do not knowingly collect personal data from children. If we become aware that a child has provided us with a phone number, we will take immediate steps to delete the account and associated records.</p>
+
+      <h2>8. Changes to this Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Effective Date".</p>
+
+      <h2>9. Contact Us</h2>
+      <p>If you have any questions, privacy concerns, or data requests, please contact us at:</p>
+      <p><strong>Email:</strong> support@chugli.app (or contact via our official GitHub repository issue tracker)</p>
+    </div>
+    <div class="footer">
+      &copy; 2026 Chugli. All rights reserved. • <a href="./terms.html">Terms of Service</a> • <a href="./delete-account.html">Account Deletion</a>
+    </div>
+  </div>
+</body>
+</html>
